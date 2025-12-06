@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <section class="auth-section">
+        <div class="aurora-bg"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="auth-container">
+                        <div class="auth-header">
+                            <h1 class="auth-title">Register</h1>
+                            <p class="auth-subtitle">Create your account</p>
+                        </div>
+
+                        {{ form_errors(registrationForm) }}
+
+                        {{ form_start(registrationForm, {'attr': {'class': 'mt-4'}}) }}
+                        <div class="form-group">
+                            {{ form_label(registrationForm.fullName, null, {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(registrationForm.fullName, {'attr': {'class': 'form-control', 'placeholder': 'Enter your name'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form_label(registrationForm.email, null, {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control', 'placeholder': 'Enter your email'}}) }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form_label(registrationForm.plainPassword, null, {'label_attr': {'class': 'form-label'}}) }}
+                            {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control', 'placeholder': 'Create a password'}}) }}
+                        </div>
+
+                        <div class="form-group form-check">
+                            {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input'}}) }}
+                            {{ form_label(registrationForm.agreeTerms, null, {'label_attr': {'class': 'form-check-label'}}) }}
+                        </div>
+
+                        <button type="submit" class="btn btn-auth">Register</button>
+                        {{ form_end(registrationForm) }}
+
+                        <div class="auth-switch mt-4">
+                            <p class="text-center mb-3">Already have an account?
+                                <a href="{{ path('app_login') }}">Login here</a>
+                            </p>
+                        </div>
+
+                        <div class="auth-options">
+                            <div class="auth-option">
+                                <i class="fab fa-google"></i>
+                            </div>
+                            <div class="auth-option">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <div class="auth-option">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}My Account{% endblock %}
+
+{% block body %}
+    <section class="container my-5">
+        <div class="p-5 mx-auto" style="max-width: 600px;">
+            <h2 class="mb-4">👤 My Account</h2>
+
+            <ul class="list-group mb-4">
+                <li class="list-group-item">
+                    <strong>Full name:</strong> {{ app.user.fullname }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Email:</strong> {{ app.user.email }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Roles:</strong> {{ app.user.roles | join(', ') }}
+                </li>
+            </ul>
+
+            <form method="post" action="{{ path('app_logout') }}">
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token('logout') }}">
+                <button type="submit" class="btn btn-hero px-4">
+                    <i class="bi bi-box-arrow-right me-2"></i> Logout
+                </button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
