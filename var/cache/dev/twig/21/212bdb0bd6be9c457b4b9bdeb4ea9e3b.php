@@ -1,0 +1,1306 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* reports/index.html.twig */
+class __TwigTemplate_e5a3ac709030dbb55378d2dc757ff822 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, Template>
+     */
+    private array $macros = [];
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'stylesheets' => [$this, 'block_stylesheets'],
+            'body' => [$this, 'block_body'],
+            'javascripts' => [$this, 'block_javascripts'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 3
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reports/index.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "reports/index.html.twig"));
+
+        $this->parent = $this->load("base.html.twig", 3);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 5
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Rapporten - SoloLevelers";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 7
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_stylesheets(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
+
+        // line 8
+        yield "    ";
+        yield from $this->yieldParentBlock("stylesheets", $context, $blocks);
+        yield "
+    <style>
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chart-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        /* Grotere charts */
+        .chart-container {
+            position: relative;
+            height: 450px;
+            margin-bottom: 1rem;
+        }
+
+        .chart-container-pie {
+            position: relative;
+            height: 400px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .chart-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .chart-actions {
+                align-self: flex-end;
+            }
+
+            .chart-container {
+                height: 350px;
+            }
+
+            .chart-container-pie {
+                height: 300px;
+            }
+
+            .export-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .export-buttons .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 82
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 83
+        yield "    <!-- Hero Section -->
+    <section class=\"hero\">
+        <div class=\"aurora-bg\"></div>
+        <div class=\"container\">
+            <div class=\"row align-items-center\">
+                <div class=\"col-lg-8 mx-auto text-center\">
+                    <h1 class=\"hero-title\">Financiële Rapporten</h1>
+                    <p class=\"hero-subtitle\">Gedetailleerde inzichten en analyse van uw transacties</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class=\"mission-section\">
+        <div class=\"container\">
+            <!-- Period Selector & Export -->
+            <div class=\"row mb-4\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"text-center mb-4\">
+                            <h3 class=\"feature-title\">Data Periode & Export</h3>
+                        </div>
+
+                        <div class=\"text-center\">
+                            <div class=\"btn-group period-selector\" role=\"group\">
+                                <button type=\"button\" class=\"btn btn-outline-auth\" data-period=\"month\">Deze Maand</button>
+                                <button type=\"button\" class=\"btn btn-outline-auth\" data-period=\"quarter\">Dit Kwartaal</button>
+                                <button type=\"button\" class=\"btn btn-outline-auth\" data-period=\"year\">Dit Jaar</button>
+                                <button type=\"button\" class=\"btn btn-outline-auth active\" data-period=\"all\">Alles</button>
+                            </div>
+                        </div>
+
+                        <div class=\"export-buttons\">
+                            <button class=\"btn btn-primary\" onclick=\"downloadAllCharts()\">
+                                <i class=\"fas fa-download\"></i> Download Alle Charts
+                            </button>
+                            <button class=\"btn btn-success\" onclick=\"exportToCSV()\">
+                                <i class=\"fas fa-file-csv\"></i> Export naar CSV
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class=\"row mb-4\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Inkomsten vs Uitgaven</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('incomeExpenseChart', 'inkomsten-uitgaven.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container\">
+                            <canvas id=\"incomeExpenseChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"row mb-4\">
+                <div class=\"col-lg-6 mb-4\">
+                    <div class=\"feature-card h-100\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Uitgaven per Categorie</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('expensePieChart', 'uitgaven-categorieen.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container-pie\">
+                            <canvas id=\"expensePieChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"col-lg-6 mb-4\">
+                    <div class=\"feature-card h-100\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Inkomsten per Categorie</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('incomePieChart', 'inkomsten-categorieen.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container-pie\">
+                            <canvas id=\"incomePieChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"row\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Maandelijkse Trend</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('monthlyTrendChart', 'maandelijkse-trend.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container\">
+                            <canvas id=\"monthlyTrendChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Data Message -->
+            <div class=\"row mb-4\" id=\"noDataMessage\" style=\"display: none;\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"no-data\">
+                            <i class=\"fas fa-chart-pie fa-3x mb-3\" style=\"color: var(--text-secondary);\"></i>
+                            <h4>Geen data beschikbaar</h4>
+                            <p>Er zijn nog geen transacties om weer te geven voor de geselecteerde periode.</p>
+                            <a href=\"";
+        // line 206
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_transactions_new");
+        yield "\" class=\"btn btn-primary mt-3\">
+                                <i class=\"fas fa-plus\"></i> Voeg je eerste transactie toe
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    // line 217
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_javascripts(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
+
+        // line 218
+        yield "    ";
+        yield from $this->yieldParentBlock("javascripts", $context, $blocks);
+        yield "
+    <script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>
+    <script src=\"https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js\"></script>
+    <script>
+        let charts = {};
+        let currentPeriod = 'all';
+        let currentChartData = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart.js default config voor witte tekst
+            Chart.defaults.color = '#FFFFFF';
+            Chart.defaults.font.family = 'var(--font-body)';
+            Chart.defaults.font.size = 12;
+
+            // Initialiseer charts
+            initializeCharts();
+
+            // Laad initiële data
+            loadChartData(currentPeriod);
+
+            // Event listeners voor periode buttons
+            document.querySelectorAll('.period-selector .btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.period-selector .btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentPeriod = this.dataset.period;
+                    loadChartData(currentPeriod);
+                });
+            });
+        });
+
+        async function loadChartData(period) {
+            try {
+                const response = await fetch(`/api/reports/chart-data?period=\${period}`);
+                const data = await response.json();
+
+                currentChartData = data;
+                updateCharts(data);
+
+                // Toon/verberg no-data message
+                const hasData = data.incomeExpense.some(item => item.income > 0 || item.expenses > 0);
+                toggleNoDataMessage(!hasData);
+
+            } catch (error) {
+                console.error('Error loading chart data:', error);
+                showError('Fout bij laden van data. Probeer het opnieuw.');
+            }
+        }
+
+        function initializeCharts() {
+            // Income vs Expense Bar Chart
+            const incomeExpenseCtx = document.getElementById('incomeExpenseChart').getContext('2d');
+            charts.incomeExpense = new Chart(incomeExpenseCtx, {
+                type: 'bar',
+                data: { labels: [], datasets: [] },
+                options: getBarChartOptions('Inkomsten vs Uitgaven')
+            });
+
+            // Expense Pie Chart
+            const expensePieCtx = document.getElementById('expensePieChart').getContext('2d');
+            charts.expensePie = new Chart(expensePieCtx, {
+                type: 'doughnut',
+                data: { labels: [], datasets: [] },
+                options: getPieChartOptions('Uitgaven per Categorie')
+            });
+
+            // Income Pie Chart
+            const incomePieCtx = document.getElementById('incomePieChart').getContext('2d');
+            charts.incomePie = new Chart(incomePieCtx, {
+                type: 'doughnut',
+                data: { labels: [], datasets: [] },
+                options: getPieChartOptions('Inkomsten per Categorie')
+            });
+
+            // Monthly Trend Line Chart
+            const monthlyTrendCtx = document.getElementById('monthlyTrendChart').getContext('2d');
+            charts.monthlyTrend = new Chart(monthlyTrendCtx, {
+                type: 'line',
+                data: { labels: [], datasets: [] },
+                options: getLineChartOptions('Maandelijkse Trend')
+            });
+        }
+
+        function updateCharts(data) {
+            // Update Income vs Expense Chart
+            charts.incomeExpense.data.labels = data.incomeExpense.map(item => item.month);
+            charts.incomeExpense.data.datasets = [
+                {
+                    label: 'Inkomsten',
+                    data: data.incomeExpense.map(item => parseFloat(item.income) || 0),
+                    backgroundColor: '#16F98A',
+                    borderColor: '#16F98A',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Uitgaven',
+                    data: data.incomeExpense.map(item => parseFloat(item.expenses) || 0),
+                    backgroundColor: '#FF6B6B',
+                    borderColor: '#FF6B6B',
+                    borderWidth: 1
+                }
+            ];
+            charts.incomeExpense.update();
+
+            // Update Expense Pie Chart
+            if (data.expenseCategories && data.expenseCategories.length > 0) {
+                charts.expensePie.data.labels = data.expenseCategories.map(item => item.category);
+                charts.expensePie.data.datasets = [{
+                    data: data.expenseCategories.map(item => parseFloat(item.amount) || 0),
+                    backgroundColor: ['#FF6B6B', '#FFCF44', '#4ECDC4', '#95E1D3', '#FF9F40', '#9966FF'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            } else {
+                charts.expensePie.data.labels = ['Geen uitgaven'];
+                charts.expensePie.data.datasets = [{
+                    data: [1],
+                    backgroundColor: ['#666'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            }
+            charts.expensePie.update();
+
+            // Update Income Pie Chart
+            if (data.incomeCategories && data.incomeCategories.length > 0) {
+                charts.incomePie.data.labels = data.incomeCategories.map(item => item.category);
+                charts.incomePie.data.datasets = [{
+                    data: data.incomeCategories.map(item => parseFloat(item.amount) || 0),
+                    backgroundColor: ['#16F98A', '#134338', '#4ECDC4', '#95E1D3', '#36A2EB', '#FFCE56'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            } else {
+                charts.incomePie.data.labels = ['Geen inkomsten'];
+                charts.incomePie.data.datasets = [{
+                    data: [1],
+                    backgroundColor: ['#666'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            }
+            charts.incomePie.update();
+
+            // Update Monthly Trend Chart
+            charts.monthlyTrend.data.labels = data.monthlyTrend.map(item => item.month);
+            charts.monthlyTrend.data.datasets = [
+                {
+                    label: 'Inkomsten',
+                    data: data.monthlyTrend.map(item => parseFloat(item.income) || 0),
+                    borderColor: '#16F98A',
+                    backgroundColor: 'rgba(22, 249, 138, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: 'Uitgaven',
+                    data: data.monthlyTrend.map(item => parseFloat(item.expenses) || 0),
+                    borderColor: '#FF6B6B',
+                    backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }
+            ];
+            charts.monthlyTrend.update();
+        }
+
+        function getBarChartOptions(title) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 12 }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(10, 31, 18, 0.95)',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#FFFFFF',
+                        borderColor: 'var(--dark-border)',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                return `\${context.dataset.label}: €\${context.parsed.y.toFixed(2)}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#FFFFFF',
+                            callback: function(value) {
+                                return '€' + value;
+                            },
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { color: 'var(--dark-border)' }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { display: false }
+                    }
+                }
+            };
+        }
+
+        function getPieChartOptions(title) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 11 },
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(10, 31, 18, 0.95)',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#FFFFFF',
+                        borderColor: 'var(--dark-border)',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.parsed;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = Math.round((value / total) * 100);
+                                return `\${label}: €\${value.toFixed(2)} (\${percentage}%)`;
+                            }
+                        }
+                    }
+                },
+                cutout: '50%'
+            };
+        }
+
+        function getLineChartOptions(title) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 12 }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(10, 31, 18, 0.95)',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#FFFFFF',
+                        borderColor: 'var(--dark-border)',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                return `\${context.dataset.label}: €\${context.parsed.y.toFixed(2)}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#FFFFFF',
+                            callback: function(value) {
+                                return '€' + value;
+                            },
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { color: 'var(--dark-border)' }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { color: 'var(--dark-border)' }
+                    }
+                }
+            };
+        }
+
+        function downloadChart(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        async function downloadAllCharts() {
+            const chartIds = ['incomeExpenseChart', 'expensePieChart', 'incomePieChart', 'monthlyTrendChart'];
+            const names = ['inkomsten-uitgaven', 'uitgaven-categorieen', 'inkomsten-categorieen', 'maandelijkse-trend'];
+
+            for (let i = 0; i < chartIds.length; i++) {
+                await new Promise(resolve => setTimeout(resolve, 500));
+                downloadChart(chartIds[i], `\${names[i]}-\${new Date().toISOString().split('T')[0]}.png`);
+            }
+        }
+
+        function exportToCSV() {
+            if (!currentChartData) {
+                showError('Geen data beschikbaar om te exporteren.');
+                return;
+            }
+
+            let csv = 'Maand,Inkomsten,Uitgaven,Netto\\n';
+
+            currentChartData.incomeExpense.forEach(item => {
+                const net = (parseFloat(item.income) || 0) - (parseFloat(item.expenses) || 0);
+                csv += `\${item.month},\${item.income || 0},\${item.expenses || 0},\${net}\\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `financien-export-\${new Date().toISOString().split('T')[0]}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function toggleNoDataMessage(show) {
+            document.getElementById('noDataMessage').style.display = show ? 'block' : 'none';
+        }
+
+        function showError(message) {
+            alert(message);
+        }
+    </script>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        yield from [];
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "reports/index.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  359 => 218,  346 => 217,  325 => 206,  200 => 83,  187 => 82,  102 => 8,  89 => 7,  66 => 5,  43 => 3,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("{# templates/reports/index.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Rapporten - SoloLevelers{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .chart-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        /* Grotere charts */
+        .chart-container {
+            position: relative;
+            height: 450px;
+            margin-bottom: 1rem;
+        }
+
+        .chart-container-pie {
+            position: relative;
+            height: 400px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .chart-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .chart-actions {
+                align-self: flex-end;
+            }
+
+            .chart-container {
+                height: 350px;
+            }
+
+            .chart-container-pie {
+                height: 300px;
+            }
+
+            .export-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .export-buttons .btn {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <!-- Hero Section -->
+    <section class=\"hero\">
+        <div class=\"aurora-bg\"></div>
+        <div class=\"container\">
+            <div class=\"row align-items-center\">
+                <div class=\"col-lg-8 mx-auto text-center\">
+                    <h1 class=\"hero-title\">Financiële Rapporten</h1>
+                    <p class=\"hero-subtitle\">Gedetailleerde inzichten en analyse van uw transacties</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class=\"mission-section\">
+        <div class=\"container\">
+            <!-- Period Selector & Export -->
+            <div class=\"row mb-4\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"text-center mb-4\">
+                            <h3 class=\"feature-title\">Data Periode & Export</h3>
+                        </div>
+
+                        <div class=\"text-center\">
+                            <div class=\"btn-group period-selector\" role=\"group\">
+                                <button type=\"button\" class=\"btn btn-outline-auth\" data-period=\"month\">Deze Maand</button>
+                                <button type=\"button\" class=\"btn btn-outline-auth\" data-period=\"quarter\">Dit Kwartaal</button>
+                                <button type=\"button\" class=\"btn btn-outline-auth\" data-period=\"year\">Dit Jaar</button>
+                                <button type=\"button\" class=\"btn btn-outline-auth active\" data-period=\"all\">Alles</button>
+                            </div>
+                        </div>
+
+                        <div class=\"export-buttons\">
+                            <button class=\"btn btn-primary\" onclick=\"downloadAllCharts()\">
+                                <i class=\"fas fa-download\"></i> Download Alle Charts
+                            </button>
+                            <button class=\"btn btn-success\" onclick=\"exportToCSV()\">
+                                <i class=\"fas fa-file-csv\"></i> Export naar CSV
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class=\"row mb-4\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Inkomsten vs Uitgaven</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('incomeExpenseChart', 'inkomsten-uitgaven.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container\">
+                            <canvas id=\"incomeExpenseChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"row mb-4\">
+                <div class=\"col-lg-6 mb-4\">
+                    <div class=\"feature-card h-100\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Uitgaven per Categorie</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('expensePieChart', 'uitgaven-categorieen.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container-pie\">
+                            <canvas id=\"expensePieChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class=\"col-lg-6 mb-4\">
+                    <div class=\"feature-card h-100\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Inkomsten per Categorie</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('incomePieChart', 'inkomsten-categorieen.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container-pie\">
+                            <canvas id=\"incomePieChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class=\"row\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"chart-header\">
+                            <h3 class=\"feature-title mb-0\">Maandelijkse Trend</h3>
+                            <div class=\"chart-actions\">
+                                <button class=\"btn btn-sm btn-outline-secondary\" onclick=\"downloadChart('monthlyTrendChart', 'maandelijkse-trend.png')\">
+                                    <i class=\"fas fa-download\"></i> PNG
+                                </button>
+                            </div>
+                        </div>
+                        <div class=\"chart-container\">
+                            <canvas id=\"monthlyTrendChart\"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- No Data Message -->
+            <div class=\"row mb-4\" id=\"noDataMessage\" style=\"display: none;\">
+                <div class=\"col-lg-10 mx-auto\">
+                    <div class=\"feature-card\">
+                        <div class=\"no-data\">
+                            <i class=\"fas fa-chart-pie fa-3x mb-3\" style=\"color: var(--text-secondary);\"></i>
+                            <h4>Geen data beschikbaar</h4>
+                            <p>Er zijn nog geen transacties om weer te geven voor de geselecteerde periode.</p>
+                            <a href=\"{{ path('app_transactions_new') }}\" class=\"btn btn-primary mt-3\">
+                                <i class=\"fas fa-plus\"></i> Voeg je eerste transactie toe
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src=\"https://cdn.jsdelivr.net/npm/chart.js\"></script>
+    <script src=\"https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js\"></script>
+    <script>
+        let charts = {};
+        let currentPeriod = 'all';
+        let currentChartData = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Chart.js default config voor witte tekst
+            Chart.defaults.color = '#FFFFFF';
+            Chart.defaults.font.family = 'var(--font-body)';
+            Chart.defaults.font.size = 12;
+
+            // Initialiseer charts
+            initializeCharts();
+
+            // Laad initiële data
+            loadChartData(currentPeriod);
+
+            // Event listeners voor periode buttons
+            document.querySelectorAll('.period-selector .btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.querySelectorAll('.period-selector .btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    currentPeriod = this.dataset.period;
+                    loadChartData(currentPeriod);
+                });
+            });
+        });
+
+        async function loadChartData(period) {
+            try {
+                const response = await fetch(`/api/reports/chart-data?period=\${period}`);
+                const data = await response.json();
+
+                currentChartData = data;
+                updateCharts(data);
+
+                // Toon/verberg no-data message
+                const hasData = data.incomeExpense.some(item => item.income > 0 || item.expenses > 0);
+                toggleNoDataMessage(!hasData);
+
+            } catch (error) {
+                console.error('Error loading chart data:', error);
+                showError('Fout bij laden van data. Probeer het opnieuw.');
+            }
+        }
+
+        function initializeCharts() {
+            // Income vs Expense Bar Chart
+            const incomeExpenseCtx = document.getElementById('incomeExpenseChart').getContext('2d');
+            charts.incomeExpense = new Chart(incomeExpenseCtx, {
+                type: 'bar',
+                data: { labels: [], datasets: [] },
+                options: getBarChartOptions('Inkomsten vs Uitgaven')
+            });
+
+            // Expense Pie Chart
+            const expensePieCtx = document.getElementById('expensePieChart').getContext('2d');
+            charts.expensePie = new Chart(expensePieCtx, {
+                type: 'doughnut',
+                data: { labels: [], datasets: [] },
+                options: getPieChartOptions('Uitgaven per Categorie')
+            });
+
+            // Income Pie Chart
+            const incomePieCtx = document.getElementById('incomePieChart').getContext('2d');
+            charts.incomePie = new Chart(incomePieCtx, {
+                type: 'doughnut',
+                data: { labels: [], datasets: [] },
+                options: getPieChartOptions('Inkomsten per Categorie')
+            });
+
+            // Monthly Trend Line Chart
+            const monthlyTrendCtx = document.getElementById('monthlyTrendChart').getContext('2d');
+            charts.monthlyTrend = new Chart(monthlyTrendCtx, {
+                type: 'line',
+                data: { labels: [], datasets: [] },
+                options: getLineChartOptions('Maandelijkse Trend')
+            });
+        }
+
+        function updateCharts(data) {
+            // Update Income vs Expense Chart
+            charts.incomeExpense.data.labels = data.incomeExpense.map(item => item.month);
+            charts.incomeExpense.data.datasets = [
+                {
+                    label: 'Inkomsten',
+                    data: data.incomeExpense.map(item => parseFloat(item.income) || 0),
+                    backgroundColor: '#16F98A',
+                    borderColor: '#16F98A',
+                    borderWidth: 1
+                },
+                {
+                    label: 'Uitgaven',
+                    data: data.incomeExpense.map(item => parseFloat(item.expenses) || 0),
+                    backgroundColor: '#FF6B6B',
+                    borderColor: '#FF6B6B',
+                    borderWidth: 1
+                }
+            ];
+            charts.incomeExpense.update();
+
+            // Update Expense Pie Chart
+            if (data.expenseCategories && data.expenseCategories.length > 0) {
+                charts.expensePie.data.labels = data.expenseCategories.map(item => item.category);
+                charts.expensePie.data.datasets = [{
+                    data: data.expenseCategories.map(item => parseFloat(item.amount) || 0),
+                    backgroundColor: ['#FF6B6B', '#FFCF44', '#4ECDC4', '#95E1D3', '#FF9F40', '#9966FF'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            } else {
+                charts.expensePie.data.labels = ['Geen uitgaven'];
+                charts.expensePie.data.datasets = [{
+                    data: [1],
+                    backgroundColor: ['#666'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            }
+            charts.expensePie.update();
+
+            // Update Income Pie Chart
+            if (data.incomeCategories && data.incomeCategories.length > 0) {
+                charts.incomePie.data.labels = data.incomeCategories.map(item => item.category);
+                charts.incomePie.data.datasets = [{
+                    data: data.incomeCategories.map(item => parseFloat(item.amount) || 0),
+                    backgroundColor: ['#16F98A', '#134338', '#4ECDC4', '#95E1D3', '#36A2EB', '#FFCE56'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            } else {
+                charts.incomePie.data.labels = ['Geen inkomsten'];
+                charts.incomePie.data.datasets = [{
+                    data: [1],
+                    backgroundColor: ['#666'],
+                    borderWidth: 2,
+                    borderColor: 'var(--dark-card)'
+                }];
+            }
+            charts.incomePie.update();
+
+            // Update Monthly Trend Chart
+            charts.monthlyTrend.data.labels = data.monthlyTrend.map(item => item.month);
+            charts.monthlyTrend.data.datasets = [
+                {
+                    label: 'Inkomsten',
+                    data: data.monthlyTrend.map(item => parseFloat(item.income) || 0),
+                    borderColor: '#16F98A',
+                    backgroundColor: 'rgba(22, 249, 138, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                },
+                {
+                    label: 'Uitgaven',
+                    data: data.monthlyTrend.map(item => parseFloat(item.expenses) || 0),
+                    borderColor: '#FF6B6B',
+                    backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                    tension: 0.4,
+                    fill: true
+                }
+            ];
+            charts.monthlyTrend.update();
+        }
+
+        function getBarChartOptions(title) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 12 }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(10, 31, 18, 0.95)',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#FFFFFF',
+                        borderColor: 'var(--dark-border)',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                return `\${context.dataset.label}: €\${context.parsed.y.toFixed(2)}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#FFFFFF',
+                            callback: function(value) {
+                                return '€' + value;
+                            },
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { color: 'var(--dark-border)' }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { display: false }
+                    }
+                }
+            };
+        }
+
+        function getPieChartOptions(title) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 11 },
+                            padding: 20
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(10, 31, 18, 0.95)',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#FFFFFF',
+                        borderColor: 'var(--dark-border)',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.parsed;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = Math.round((value / total) * 100);
+                                return `\${label}: €\${value.toFixed(2)} (\${percentage}%)`;
+                            }
+                        }
+                    }
+                },
+                cutout: '50%'
+            };
+        }
+
+        function getLineChartOptions(title) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 12 }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: 'rgba(10, 31, 18, 0.95)',
+                        titleColor: '#FFFFFF',
+                        bodyColor: '#FFFFFF',
+                        borderColor: 'var(--dark-border)',
+                        borderWidth: 1,
+                        callbacks: {
+                            label: function(context) {
+                                return `\${context.dataset.label}: €\${context.parsed.y.toFixed(2)}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            color: '#FFFFFF',
+                            callback: function(value) {
+                                return '€' + value;
+                            },
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { color: 'var(--dark-border)' }
+                    },
+                    x: {
+                        ticks: {
+                            color: '#FFFFFF',
+                            font: { family: 'var(--font-body)', size: 11 }
+                        },
+                        grid: { color: 'var(--dark-border)' }
+                    }
+                }
+            };
+        }
+
+        function downloadChart(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        async function downloadAllCharts() {
+            const chartIds = ['incomeExpenseChart', 'expensePieChart', 'incomePieChart', 'monthlyTrendChart'];
+            const names = ['inkomsten-uitgaven', 'uitgaven-categorieen', 'inkomsten-categorieen', 'maandelijkse-trend'];
+
+            for (let i = 0; i < chartIds.length; i++) {
+                await new Promise(resolve => setTimeout(resolve, 500));
+                downloadChart(chartIds[i], `\${names[i]}-\${new Date().toISOString().split('T')[0]}.png`);
+            }
+        }
+
+        function exportToCSV() {
+            if (!currentChartData) {
+                showError('Geen data beschikbaar om te exporteren.');
+                return;
+            }
+
+            let csv = 'Maand,Inkomsten,Uitgaven,Netto\\n';
+
+            currentChartData.incomeExpense.forEach(item => {
+                const net = (parseFloat(item.income) || 0) - (parseFloat(item.expenses) || 0);
+                csv += `\${item.month},\${item.income || 0},\${item.expenses || 0},\${net}\\n`;
+            });
+
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', `financien-export-\${new Date().toISOString().split('T')[0]}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function toggleNoDataMessage(show) {
+            document.getElementById('noDataMessage').style.display = show ? 'block' : 'none';
+        }
+
+        function showError(message) {
+            alert(message);
+        }
+    </script>
+{% endblock %}", "reports/index.html.twig", "/Users/krishnabihari/Documents/GitHub/Budget-Buddy/templates/reports/index.html.twig");
+    }
+}

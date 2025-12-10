@@ -1,0 +1,16 @@
+cc4566,127.0.0.1,GET,http://127.0.0.1:8000/,1765389596,,404,request
+53d23f,127.0.0.1,GET,http://127.0.0.1:8000/,1765389597,,404,request
+63dd3f,127.0.0.1,GET,http://127.0.0.1:8000/home,1765389601,,200,request
+619486,127.0.0.1,GET,http://127.0.0.1:8000/assets/styles/app.css,1765389601,c61cd5,404,request
+c61cd5,127.0.0.1,GET,http://127.0.0.1:8000/assets/styles/app.css,1765389601,,404,request
+65b6ed,127.0.0.1,GET,http://127.0.0.1:8000/js/main.js,1765389601,be44b8,404,request
+615f6f,127.0.0.1,GET,http://127.0.0.1:8000/js/language.js,1765389601,a96f4c,404,request
+be44b8,127.0.0.1,GET,http://127.0.0.1:8000/js/main.js,1765389601,,404,request
+a96f4c,127.0.0.1,GET,http://127.0.0.1:8000/js/language.js,1765389601,,404,request
+52dc20,127.0.0.1,GET,http://127.0.0.1:8000/assets/img/BB-logo.png,1765389601,b90ec9,404,request
+b90ec9,127.0.0.1,GET,http://127.0.0.1:8000/assets/img/BB-logo.png,1765389601,,404,request
+26285d,127.0.0.1,GET,http://127.0.0.1:8000/home,1765389601,,200,request
+2fefbf,127.0.0.1,GET,http://127.0.0.1:8000/assets/img/BB-logo.png,1765389601,b5ccf0,404,request
+b5ccf0,127.0.0.1,GET,http://127.0.0.1:8000/assets/img/BB-logo.png,1765389601,,404,request
+7db7e0,127.0.0.1,GET,http://127.0.0.1:8000/register,1765389647,,200,request
+7586b5,127.0.0.1,GET,http://127.0.0.1:8000/home,1765389649,,200,request
